@@ -50,6 +50,28 @@ project "GLFW"
 			"_GLFW_X11"
 		}
 
+	filter "system:macosx"
+        pic "On"
+        systemversion "10.0"
+        
+        files
+        {
+            "src/cocoa_time.c",
+            "src/posix_module.c",
+            "src/posix_thread.c",
+            "src/cocoa_init.m",
+            "src/cocoa_joystick.m",
+            "src/cocoa_monitor.m",
+            "src/cocoa_window.m",
+            "src/nsgl_context.m",
+        }
+
+        defines
+        {
+            "_GLFW_COCOA"
+        }
+
+
 	filter "system:windows"
 		systemversion "latest"
 
