@@ -52,7 +52,7 @@ project "GLFW"
 
 	filter "system:macosx"
         pic "On"
-        systemversion "10.0"
+        systemversion "latest"
         
         files
         {
